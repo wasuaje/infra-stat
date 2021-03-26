@@ -1,0 +1,17 @@
+/* CSS declarations go here */
+
+
+.alert {
+       height: 75px;
+       text-align: center;
+ 
+}
+.container
+{      
+       text-align: center;
+}
+
+.active {       
+       text-align: center; 
+}
+

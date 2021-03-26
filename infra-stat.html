@@ -1,0 +1,44 @@
+<head>
+  <title>infra-stat</title>  
+
+</head>
+
+<body>
+  {{> hello}}
+  
+</body>
+
+<template name="hello">
+<div class="container">   	
+  <div class="row">   
+   <div class="col-md-12" >
+   	  <h2>Estado de la Infraestructura de Sistemas</h2><br>
+
+       <table border="1" align="center">
+       	<tr class="alert-info" >
+       		<td >Host</td>
+			<td >Servicio</td>
+			<td >Mensaje</td>
+			<td >Prox. Revision</td>
+		</tr>		
+        {{#each services}}
+          {{> service}}
+        {{/each}}       
+     </table>
+   </div>
+  </div>
+ </div>
+</template>
+
+      
+
+<!--<div class='col-md-2 alert {{#MiEstado servicestatus}} {{prueba}} {{/MiEstado}}'> -->       
+<template name="service">        
+    
+       <tr  class=' {{#MiEstado servicestatus}} {{prueba}} {{/MiEstado}} ' >       	
+  		<td> {{host}} </td>
+  		<td>{{service}} </td>
+  		<td>{{plugin_output}} </td>
+  		<td>{{next_check}} </td>
+  	   </tr>    
+</template>
